@@ -1,0 +1,14 @@
+<div class="card">
+	<img src="{{product.image}}" class="card-img-top">
+	<div class="card-body">
+		<h5 class="card-title">{{product.name}}</h5>
+		<div class="card-title">
+			{{product.price}}
+			{% if product.promo %}
+				<div class="text text-warning">Promo !
+				</div>
+			{% endif %}
+		</div>
+		<p class="text text-muted">{{product.description}}</p>
+	</div>
+</div>
