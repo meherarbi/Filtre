@@ -7,7 +7,7 @@
 			{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
-						           and uncomment the following Encore helpers to start using Symfony UX #}
+																				           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -19,6 +19,11 @@
 					grid-template-columns: repeat(3, 1fr);
 					grid: gap 20px;
 				}
+				.filter {
+					display: block;
+					position: sticky;
+					top: 20px;
+				}
 			</style>
 		{% endblock %}
 
@@ -27,6 +32,11 @@
 		{% endblock %}
 	</head>
 	<body>
-		{% block body %}{% endblock %}
-	</body>
-</html>
+		<nav class="navbar navbar-dark bg-primary">
+			<a href="/" class="navbar-brand mb-0 h1">Produits</a>
+		</nav>
+
+		<div style="margin-top: 3rem;"> {% block body %}{% endblock %}
+			</div>
+		</body>
+	</html>
