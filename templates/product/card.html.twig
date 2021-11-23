@@ -2,8 +2,9 @@
 	<img src="{{product.image}}" class="card-img-top">
 	<div class="card-body">
 		<h5 class="card-title">{{product.name}}</h5>
-		<div class="card-title">
-			{{product.price}}
+		<div class="card-title" style="font-weight: bold; font: size 1.5rem;">
+			{{product.price | number_format(0,',','')}}
+			$
 			{% if product.promo %}
 				<div class="text text-warning">Promo !
 				</div>
